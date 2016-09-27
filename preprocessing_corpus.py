@@ -19,4 +19,4 @@ def corpus_preprocess(corpus_directory_path,stop_file_path):
 				print category_names[i]+" "+doc_name+" "+" ".join(words).encode("gbk")
 			input.close()
 if __name__=="__main__":
-	corpus_preprocess("D:\BaiduYunDownload\experiment\dissertation_experiment\corpus","D:\BaiduYunDownload\experiment\dissertation_experiment\stopwords.txt")
+	corpus_preprocess(sys.argv[1],sys.argv[2])
