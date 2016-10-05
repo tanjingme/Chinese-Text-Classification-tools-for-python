@@ -4,9 +4,8 @@ import sys,os
 import numpy as np
 import matplotlib.pyplot as plt
 import random
-from pylsy import pylsytable
-sys.path.append("E:\Documents\libsvm-3.21\libsvm-3.21\python")
-os.chdir("E:\Documents\libsvm-3.21\libsvm-3.21\python")
+#sys.path.append("E:\Documents\libsvm-3.21\libsvm-3.21\python")# it add the libsvm packet into your python library
+#os.chdir("E:\Documents\libsvm-3.21\libsvm-3.21\python")# do the same
 from svmutil import *
 
 class Document:
@@ -134,16 +133,13 @@ class SVMClassifier:
 		m=svm_train(self.train_y,self.train_x,cmd)
 		p_label,p_acc,p_val=svm_predict(self.test_y,self.test_x,m)
 		
-		#self.test_status(self.test_y,p_label)
+		#self.test_status(self.test_y,p_label)# the code is used to show your detail result of the error classification
 		return p_acc
 	def test_status(self,A,B):
 		id_to_clzz={value:key for key, value in self.train_corpus.clzzs_dict.items()}
 		temp= filter(lambda x:x[1]!=x[2],zip(range(len(A)),A,B))
 		result=[self.test_corpus.docs_list[item[0]].id+" "+id_to_clzz[item[2]]+"/n" for item in temp]
 		print result
-		# id=[item[0] for item in temp]
-		# for i in id:
-			# print self.test_corpus.docs_list[i]
 		
 def corpus_allocation(preprocessed_corpus_path,allocation_percentage_list):
 	categories=list()
@@ -192,15 +188,7 @@ def random_apportion(b,n):
 	v=[i/vsum for i in v]
 	print sum(v)
 	print [i/vsum for i in v]
-
 	return v
-if __name__=="__main__":
-	preprocessed_documents_path="D:\BaiduYunDownload\experiment\dissertation_experiment\preprocessed_documents.data"
-	
-	t1,t2=corpus_allocation(preprocessed_documents_path,[0.01]*10)
-	t1.compute_weight();
-	t2.compute_weight();
-	v=SVMClassifier(t1,t2);
-	v.evaluation('-h 0 -c 56.0038 -g 0.0200 -q');
+
 	
 
