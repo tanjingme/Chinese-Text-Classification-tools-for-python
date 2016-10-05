@@ -8,7 +8,7 @@ USAGE:
        python preprocessing_corpus.py corpus_directory_path stopword_file_path > preprocessed_corpus_file
 
 # text_classify.py
-The function corpus_allocation() allocate the corpus data into training corpus and testing corpus by setting the proportional list which specify the share of  documents in specific category. Its input parameters include the string of path of the above preprocessed file and  the proportional list, in which every element must belong to the interval [0,1] and the sum of the elements can be bigger than one. Its return list includes training corpus and testing corpus which are objects of Class Corpus.
+The function corpus_allocation() allocate the corpus data into training corpus and testing corpus by setting the proportional list which specifies the share of  documents in specific category. Its input parameters include the string of path of the above preprocessed file and  the proportional list, in which every element must belong to the interval [0,1] and the sum of the elements can be bigger than one. Its return list includes training corpus and testing corpus which are objects of Class Corpus.
 corpus_allocation
 
 USAGE: 
