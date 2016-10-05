@@ -1,8 +1,6 @@
 # -*- coding: UTF-8 -*-
 import math
 import sys,os
-import numpy as np
-import matplotlib.pyplot as plt
 import random
 #sys.path.append("E:\Documents\libsvm-3.21\libsvm-3.21\python")# it add the libsvm packet into your python library
 #os.chdir("E:\Documents\libsvm-3.21\libsvm-3.21\python")# do the same
