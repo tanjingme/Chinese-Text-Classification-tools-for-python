@@ -11,7 +11,7 @@ corpus_allocation
 
 USAGE: train_corpus,test_corpus=corpus_allocation(preprocessed_corpus_path,allocation_percentage_list):
 
-The function compute_weight computing the weight of words corresponding to documents in a corpus and it is the member fuction of the class Corpus. It is a non-parameter function and doesn't return anything.
+The function compute_weight computing the weight of words corresponding to documents in a corpus and it is the member fuction of the class Corpus. It is a non-parameter function and doesn't return anything. you can change the code in the class Weight code block to change the way how it  implements and now it uses the tf-idf.
 
 USAGE: corpus.compute_weight()
 
