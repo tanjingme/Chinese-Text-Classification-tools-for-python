@@ -68,7 +68,7 @@ class Corpus:
 	__repr__=__str__
 
 class SVMClassifier:
-	def __init__(self,train_corpus,test_corpus,):
+	def __init__(self,train_corpus,test_corpus):
 		self.train_corpus=train_corpus
 		self.test_corpus=test_corpus
 		self.train_y=[]
