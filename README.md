@@ -18,5 +18,6 @@ USAGE: corpus.compute_weight()
 The class SVMClassifier use the libsvm function packet to classify the texts. and its input parameter list includes two Corpus object:the first one is training corpus object and the second one is testing corpus object. and its member function evaluation() using to evaluate the model recieves the same control parameter string with libsvm and return the model of accurate.
 
 USAGE: svmcl=SVMClassifier(train_corpus,test_corpus)
+       
        svmcl.evaluation('-h 0 -c 56.0038 -g 0.0200 -q')
 
