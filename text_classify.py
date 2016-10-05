@@ -81,7 +81,7 @@ class SVMClassifier:
 		self.feature_words=[]
 		self.get_features(10000)
 	
-	def cbiwdf(self):
+	def cbiwdf(self):#ref Li B. Selecting Features with Class Based and Importance Weighted Document Frequency in Text Classification[C]//Proceedings of the 2016 ACM Symposium on Document Engineering. ACM, 2016: 139-142.
 		temp={}
 		docs_list=self.train_corpus.docs_list
 		clzz_nums=len(self.train_corpus.clzzs_dict.keys())
